@@ -2941,6 +2941,22 @@ namespace System.Data.SqlClient
         public System.Threading.Tasks.Task WriteToServerAsync(System.Data.Common.DbDataReader reader) { throw null; }
         [System.MonoTODOAttribute]
         public System.Threading.Tasks.Task WriteToServerAsync(System.Data.Common.DbDataReader reader, System.Threading.CancellationToken cancellationToken) { throw null; }
+        [System.MonoTODOAttribute]
+        public System.Threading.Tasks.Task WriteToServerAsync(System.Data.DataRow[] rows) { throw null; }
+        [System.MonoTODOAttribute]
+        public System.Threading.Tasks.Task WriteToServerAsync(System.Data.DataRow[] rows, System.Threading.CancellationToken cancellationToken) { throw null; }
+        [System.MonoTODOAttribute]
+        public System.Threading.Tasks.Task WriteToServerAsync(System.Data.DataTable table) { throw null; }
+        [System.MonoTODOAttribute]
+        public System.Threading.Tasks.Task WriteToServerAsync(System.Data.DataTable table, System.Data.DataRowState rowState) { throw null; }
+        [System.MonoTODOAttribute]
+        public System.Threading.Tasks.Task WriteToServerAsync(System.Data.DataTable table, System.Data.DataRowState rowState, System.Threading.CancellationToken cancellationToken) { throw null; }
+        [System.MonoTODOAttribute]
+        public System.Threading.Tasks.Task WriteToServerAsync(System.Data.DataTable table, System.Threading.CancellationToken cancellationToken) { throw null; }
+        [System.MonoTODOAttribute]
+        public System.Threading.Tasks.Task WriteToServerAsync(System.Data.IDataReader reader) { throw null; }
+        [System.MonoTODOAttribute]
+        public System.Threading.Tasks.Task WriteToServerAsync(System.Data.IDataReader reader, System.Threading.CancellationToken cancellationToken) { throw null; }
     }
     public sealed partial class SqlBulkCopyColumnMapping
     {
