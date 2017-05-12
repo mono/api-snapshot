@@ -1675,7 +1675,6 @@ namespace System.Data
         int IndexOf(string sourceTableName);
         void RemoveAt(string sourceTableName);
     }
-    [System.SerializableAttribute]
     public enum KeyRestrictionBehavior
     {
         AllowOnly = 0,
@@ -1687,7 +1686,6 @@ namespace System.Data
         PreserveChanges = 2,
         Upsert = 3,
     }
-    [System.SerializableAttribute]
     public enum MappingType
     {
         Attribute = 2,
@@ -2887,7 +2885,6 @@ namespace System.Data.Sql
 }
 namespace System.Data.SqlClient
 {
-    [System.SerializableAttribute]
     public enum ApplicationIntent
     {
         ReadOnly = 1,
@@ -4025,7 +4022,6 @@ namespace System.Data.SqlTypes
         public void Write(long offset, char[] buffer, int offsetInBuffer, int count) { }
     }
     [System.FlagsAttribute]
-    [System.SerializableAttribute]
     public enum SqlCompareOptions
     {
         BinarySort = 32768,

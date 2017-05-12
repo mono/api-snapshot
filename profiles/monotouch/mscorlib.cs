@@ -6085,7 +6085,6 @@ namespace System.Collections.Concurrent
         public int TryPopRange(T[] items, int startIndex, int count) { throw null; }
     }
     [System.FlagsAttribute]
-    [System.SerializableAttribute]
     public enum EnumerablePartitionerOptions
     {
         NoBuffering = 1,
@@ -20253,7 +20252,6 @@ namespace System.Security.Cryptography.X509Certificates
         Unknown = 0,
     }
     [System.FlagsAttribute]
-    [System.SerializableAttribute]
     public enum X509KeyStorageFlags
     {
         DefaultKeySet = 0,
