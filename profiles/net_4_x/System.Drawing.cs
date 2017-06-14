@@ -3506,7 +3506,7 @@ namespace System.Drawing.Imaging
         public short Type { get { throw null; } set { } }
         public byte[] Value { get { throw null; } set { } }
     }
-    [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential, Pack=2)]
+    [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public sealed partial class WmfPlaceableFileHeader
     {
         public WmfPlaceableFileHeader() { }
