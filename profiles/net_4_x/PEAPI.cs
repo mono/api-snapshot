@@ -473,6 +473,7 @@ namespace PEAPI
     }
     public enum ImplAttr
     {
+        AggressiveInlining = 256,
         ForwardRef = 16,
         IL = 0,
         InternalCall = 4096,
