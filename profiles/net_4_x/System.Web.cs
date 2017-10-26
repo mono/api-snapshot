@@ -8505,7 +8505,7 @@ namespace System.Web.UI
     public sealed partial class IndexedString
     {
         public IndexedString(string s) { }
-        public string Value { [System.Runtime.CompilerServices.CompilerGeneratedAttribute]get { throw null; } }
+        public string Value { get { throw null; } }
     }
     public partial interface IParserAccessor
     {
