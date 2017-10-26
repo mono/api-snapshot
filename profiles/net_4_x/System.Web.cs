@@ -8481,12 +8481,14 @@ namespace System.Web.UI
         System.Web.UI.IHierarchicalEnumerable GetChildren();
         System.Web.UI.IHierarchyData GetParent();
     }
-    [System.Web.AspNetHostingPermissionAttribute(System.Security.Permissions.SecurityAction.LinkDemand, Level=(System.Web.AspNetHostingPermissionLevel)(200))]
     public sealed partial class ImageClickEventArgs : System.EventArgs
     {
         public int X;
+        public double XRaw;
         public int Y;
+        public double YRaw;
         public ImageClickEventArgs(int x, int y) { }
+        public ImageClickEventArgs(int x, int y, double xRaw, double yRaw) { }
     }
     public delegate void ImageClickEventHandler(object sender, System.Web.UI.ImageClickEventArgs e);
     public partial interface INamingContainer
