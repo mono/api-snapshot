@@ -7891,8 +7891,6 @@ namespace System.Web.UI
         [System.Security.Permissions.SecurityPermissionAttribute(System.Security.Permissions.SecurityAction.Demand, ControlThread=true)]
         public static System.Web.UI.ControlBuilder ParseTheme(System.ComponentModel.Design.IDesignerHost host, string theme, string themePath) { throw null; }
     }
-    [System.Web.AspNetHostingPermissionAttribute(System.Security.Permissions.SecurityAction.InheritanceDemand, Level=(System.Web.AspNetHostingPermissionLevel)(200))]
-    [System.Web.AspNetHostingPermissionAttribute(System.Security.Permissions.SecurityAction.LinkDemand, Level=(System.Web.AspNetHostingPermissionLevel)(200))]
     public partial class EmptyControlCollection : System.Web.UI.ControlCollection
     {
         public EmptyControlCollection(System.Web.UI.Control owner) : base (default(System.Web.UI.Control)) { }
