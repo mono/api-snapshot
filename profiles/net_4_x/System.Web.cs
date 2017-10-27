@@ -17564,8 +17564,6 @@ namespace System.Web.UI.WebControls
         public TableCellControlBuilder() { }
         public override bool AllowWhitespaceLiterals() { throw null; }
     }
-    [System.Web.AspNetHostingPermissionAttribute(System.Security.Permissions.SecurityAction.InheritanceDemand, Level=(System.Web.AspNetHostingPermissionLevel)(200))]
-    [System.Web.AspNetHostingPermissionAttribute(System.Security.Permissions.SecurityAction.LinkDemand, Level=(System.Web.AspNetHostingPermissionLevel)(200))]
     public partial class TableFooterRow : System.Web.UI.WebControls.TableRow
     {
         public TableFooterRow() { }
