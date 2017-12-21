@@ -789,6 +789,8 @@ namespace System.Security.Cryptography.Xml
     {
         public SignedInfo() { }
         public string CanonicalizationMethod { get { throw null; } set { } }
+        [System.MonoTODOAttribute]
+        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Security.Cryptography.Xml.Transform CanonicalizationMethodObject { get { throw null; } }
         public int Count { get { throw null; } }
         public string Id { get { throw null; } set { } }
@@ -838,11 +840,8 @@ namespace System.Security.Cryptography.Xml
         [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Security.Cryptography.Xml.EncryptedXml EncryptedXml { get { throw null; } set { } }
         public System.Security.Cryptography.Xml.KeyInfo KeyInfo { get { throw null; } set { } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Xml.XmlResolver Resolver { set { } }
-        public System.Collections.ObjectModel.Collection<string> SafeCanonicalizationMethods { get { throw null; } }
         public System.Security.Cryptography.Xml.Signature Signature { get { throw null; } }
-        public System.Func<System.Security.Cryptography.Xml.SignedXml, bool> SignatureFormatValidator { get { throw null; } set { } }
         public string SignatureLength { get { throw null; } }
         public string SignatureMethod { get { throw null; } }
         public byte[] SignatureValue { get { throw null; } }
@@ -854,6 +853,7 @@ namespace System.Security.Cryptography.Xml
         public bool CheckSignature() { throw null; }
         public bool CheckSignature(System.Security.Cryptography.AsymmetricAlgorithm key) { throw null; }
         public bool CheckSignature(System.Security.Cryptography.KeyedHashAlgorithm macAlg) { throw null; }
+        [System.MonoTODOAttribute]
         [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public bool CheckSignature(System.Security.Cryptography.X509Certificates.X509Certificate2 certificate, bool verifySignatureOnly) { throw null; }
         public bool CheckSignatureReturningKey(out System.Security.Cryptography.AsymmetricAlgorithm signingKey) { signingKey = default(System.Security.Cryptography.AsymmetricAlgorithm); throw null; }
