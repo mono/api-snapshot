@@ -2272,7 +2272,8 @@ namespace System.Collections.Generic
 }
 namespace System.Collections.ObjectModel
 {
-    [System.Runtime.CompilerServices.TypeForwardedFromAttribute("WindowsBase, Version=3.0.0.0, Culture=Neutral, PublicKeyToken=31bf3856ad364e35")]
+    [System.Diagnostics.DebuggerDisplayAttribute("Count = {Count}")]
+    [System.Diagnostics.DebuggerTypeProxyAttribute("System.Collections.Generic.CollectionDebugView<T>")]
     [System.SerializableAttribute]
     public partial class ObservableCollection<T> : System.Collections.ObjectModel.Collection<T>, System.Collections.Specialized.INotifyCollectionChanged, System.ComponentModel.INotifyPropertyChanged
     {
@@ -2293,7 +2294,8 @@ namespace System.Collections.ObjectModel
         protected override void RemoveItem(int index) { }
         protected override void SetItem(int index, T item) { }
     }
-    [System.Runtime.CompilerServices.TypeForwardedFromAttribute("WindowsBase, Version=3.0.0.0, Culture=Neutral, PublicKeyToken=31bf3856ad364e35")]
+    [System.Diagnostics.DebuggerDisplayAttribute("Count = {Count}")]
+    [System.Diagnostics.DebuggerTypeProxyAttribute("System.Collections.Generic.CollectionDebugView<T>")]
     [System.SerializableAttribute]
     public partial class ReadOnlyObservableCollection<T> : System.Collections.ObjectModel.ReadOnlyCollection<T>, System.Collections.Specialized.INotifyCollectionChanged, System.ComponentModel.INotifyPropertyChanged
     {
@@ -2324,6 +2326,7 @@ namespace System.Collections.Specialized
         public override int GetHashCode() { throw null; }
         public override string ToString() { throw null; }
         public static string ToString(System.Collections.Specialized.BitVector32 value) { throw null; }
+        [System.Runtime.CompilerServices.IsReadOnlyAttribute]
         [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
         public partial struct Section
         {
@@ -2369,7 +2372,6 @@ namespace System.Collections.Specialized
         public void Remove(object key) { }
         System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() { throw null; }
     }
-    [System.Runtime.CompilerServices.TypeForwardedFromAttribute("WindowsBase, Version=3.0.0.0, Culture=Neutral, PublicKeyToken=31bf3856ad364e35")]
     public partial interface INotifyCollectionChanged
     {
         event System.Collections.Specialized.NotifyCollectionChangedEventHandler CollectionChanged;
@@ -2401,6 +2403,14 @@ namespace System.Collections.Specialized
         public System.Collections.IDictionaryEnumerator GetEnumerator() { throw null; }
         public void Remove(object key) { }
         System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() { throw null; }
+        [System.SerializableAttribute]
+        public partial class DictionaryNode
+        {
+            public object key;
+            public System.Collections.Specialized.ListDictionary.DictionaryNode next;
+            public object value;
+            public DictionaryNode() { }
+        }
     }
     [System.SerializableAttribute]
     public abstract partial class NameObjectCollectionBase : System.Collections.ICollection, System.Collections.IEnumerable, System.Runtime.Serialization.IDeserializationCallback, System.Runtime.Serialization.ISerializable
@@ -2481,7 +2491,6 @@ namespace System.Collections.Specialized
         public virtual void Remove(string name) { }
         public virtual void Set(string name, string value) { }
     }
-    [System.Runtime.CompilerServices.TypeForwardedFromAttribute("WindowsBase, Version=3.0.0.0, Culture=Neutral, PublicKeyToken=31bf3856ad364e35")]
     public enum NotifyCollectionChangedAction
     {
         Add = 0,
@@ -2490,7 +2499,6 @@ namespace System.Collections.Specialized
         Replace = 2,
         Reset = 4,
     }
-    [System.Runtime.CompilerServices.TypeForwardedFromAttribute("WindowsBase, Version=3.0.0.0, Culture=Neutral, PublicKeyToken=31bf3856ad364e35")]
     public partial class NotifyCollectionChangedEventArgs : System.EventArgs
     {
         public NotifyCollectionChangedEventArgs(System.Collections.Specialized.NotifyCollectionChangedAction action) { }
@@ -2510,7 +2518,6 @@ namespace System.Collections.Specialized
         public System.Collections.IList OldItems { get { throw null; } }
         public int OldStartingIndex { get { throw null; } }
     }
-    [System.Runtime.CompilerServices.TypeForwardedFromAttribute("WindowsBase, Version=3.0.0.0, Culture=Neutral, PublicKeyToken=31bf3856ad364e35")]
     public delegate void NotifyCollectionChangedEventHandler(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e);
     [System.SerializableAttribute]
     public partial class OrderedDictionary : System.Collections.ICollection, System.Collections.IDictionary, System.Collections.IEnumerable, System.Collections.Specialized.IOrderedDictionary, System.Runtime.Serialization.IDeserializationCallback, System.Runtime.Serialization.ISerializable
@@ -2535,7 +2542,6 @@ namespace System.Collections.Specialized
         public bool Contains(object key) { throw null; }
         public void CopyTo(System.Array array, int index) { }
         public virtual System.Collections.IDictionaryEnumerator GetEnumerator() { throw null; }
-        [System.Security.Permissions.SecurityPermissionAttribute(System.Security.Permissions.SecurityAction.LinkDemand, Flags=(System.Security.Permissions.SecurityPermissionFlag)(128))]
         public virtual void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         public void Insert(int index, object key, object value) { }
         protected virtual void OnDeserialization(object sender) { }
@@ -2574,7 +2580,6 @@ namespace System.Collections.Specialized
         void System.Collections.IList.Insert(int index, object value) { }
         void System.Collections.IList.Remove(object value) { }
     }
-    [System.ComponentModel.Design.Serialization.DesignerSerializerAttribute("System.Diagnostics.Design.StringDictionaryCodeDomSerializer, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.ComponentModel.Design.Serialization.CodeDomSerializer, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [System.SerializableAttribute]
     public partial class StringDictionary : System.Collections.IEnumerable
     {
