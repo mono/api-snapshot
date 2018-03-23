@@ -5667,18 +5667,16 @@ namespace System.Net
     public sealed partial class FtpWebRequest : System.Net.WebRequest
     {
         internal FtpWebRequest() { }
-        [System.MonoTODOAttribute]
+        public override System.Net.Cache.RequestCachePolicy CachePolicy { get { throw null; } set { } }
         public System.Security.Cryptography.X509Certificates.X509CertificateCollection ClientCertificates { get { throw null; } set { } }
-        [System.MonoTODOAttribute]
         public override string ConnectionGroupName { get { throw null; } set { } }
         public override long ContentLength { get { throw null; } set { } }
         public long ContentOffset { get { throw null; } set { } }
         public override string ContentType { get { throw null; } set { } }
         public override System.Net.ICredentials Credentials { get { throw null; } set { } }
+        public static new System.Net.Cache.RequestCachePolicy DefaultCachePolicy { get { throw null; } set { } }
         public bool EnableSsl { get { throw null; } set { } }
-        [System.MonoTODOAttribute]
         public override System.Net.WebHeaderCollection Headers { get { throw null; } set { } }
-        [System.MonoTODOAttribute("We don't support KeepAlive = true")]
         public bool KeepAlive { get { throw null; } set { } }
         public override string Method { get { throw null; } set { } }
         public override bool PreAuthenticate { get { throw null; } set { } }
@@ -5689,7 +5687,6 @@ namespace System.Net
         public System.Net.ServicePoint ServicePoint { get { throw null; } }
         public override int Timeout { get { throw null; } set { } }
         public bool UseBinary { get { throw null; } set { } }
-        [System.MonoTODOAttribute]
         public override bool UseDefaultCredentials { get { throw null; } set { } }
         public bool UsePassive { get { throw null; } set { } }
         public override void Abort() { }
@@ -5700,7 +5697,7 @@ namespace System.Net
         public override System.IO.Stream GetRequestStream() { throw null; }
         public override System.Net.WebResponse GetResponse() { throw null; }
     }
-    public partial class FtpWebResponse : System.Net.WebResponse
+    public partial class FtpWebResponse : System.Net.WebResponse, System.IDisposable
     {
         internal FtpWebResponse() { }
         public string BannerMessage { get { throw null; } }
