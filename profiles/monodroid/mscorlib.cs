@@ -25594,7 +25594,6 @@ namespace System.Threading.Tasks
 {
     [System.Diagnostics.DebuggerDisplayAttribute("Concurrent={ConcurrentTaskCountForDebugger}, Exclusive={ExclusiveTaskCountForDebugger}, Mode={ModeForDebugger}")]
     [System.Diagnostics.DebuggerTypeProxyAttribute("System.Threading.Tasks.ConcurrentExclusiveSchedulerPair.DebugView")]
-    [System.Security.Permissions.HostProtectionAttribute(System.Security.Permissions.SecurityAction.LinkDemand, Synchronization=true, ExternalThreading=true)]
     public partial class ConcurrentExclusiveSchedulerPair
     {
         public ConcurrentExclusiveSchedulerPair() { }
