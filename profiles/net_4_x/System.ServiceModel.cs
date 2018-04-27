@@ -4473,6 +4473,13 @@ namespace System.ServiceModel.Channels
         [System.MonoTODOAttribute]
         void System.ServiceModel.Description.IPolicyImportExtension.ImportPolicy(System.ServiceModel.Description.MetadataImporter importer, System.ServiceModel.Description.PolicyConversionContext context) { }
     }
+    public partial class TransactionMessageProperty
+    {
+        public TransactionMessageProperty(System.Transactions.Transaction tx, System.ServiceModel.Channels.Message msg) { }
+        public System.Transactions.Transaction Transaction { get { throw null; } }
+        [System.MonoTODOAttribute]
+        public static void Set(System.Transactions.Transaction tx, System.ServiceModel.Channels.Message msg) { }
+    }
     public enum TransferSession
     {
         None = 0,
