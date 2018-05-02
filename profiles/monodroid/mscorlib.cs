@@ -23925,79 +23925,51 @@ namespace System.Security.Principal
 }
 namespace System.Text
 {
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.SerializableAttribute]
     public partial class ASCIIEncoding : System.Text.Encoding
     {
         public ASCIIEncoding() { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public override bool IsSingleByte { get { throw null; } }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        [System.Security.SecurityCriticalAttribute]
         public unsafe override int GetByteCount(char* chars, int count) { throw null; }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override int GetByteCount(char[] chars, int index, int count) { throw null; }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override int GetByteCount(string chars) { throw null; }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        [System.Security.SecurityCriticalAttribute]
         public unsafe override int GetBytes(char* chars, int charCount, byte* bytes, int byteCount) { throw null; }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override int GetBytes(char[] chars, int charIndex, int charCount, byte[] bytes, int byteIndex) { throw null; }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override int GetBytes(string chars, int charIndex, int charCount, byte[] bytes, int byteIndex) { throw null; }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        [System.Security.SecurityCriticalAttribute]
         public unsafe override int GetCharCount(byte* bytes, int count) { throw null; }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override int GetCharCount(byte[] bytes, int index, int count) { throw null; }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        [System.Security.SecurityCriticalAttribute]
         public unsafe override int GetChars(byte* bytes, int byteCount, char* chars, int charCount) { throw null; }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override int GetChars(byte[] bytes, int byteIndex, int byteCount, char[] chars, int charIndex) { throw null; }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public override System.Text.Decoder GetDecoder() { throw null; }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public override System.Text.Encoder GetEncoder() { throw null; }
         public override int GetMaxByteCount(int charCount) { throw null; }
         public override int GetMaxCharCount(int byteCount) { throw null; }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override string GetString(byte[] bytes, int byteIndex, int byteCount) { throw null; }
     }
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.SerializableAttribute]
     public abstract partial class Decoder
     {
         protected Decoder() { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Text.DecoderFallback Fallback { get { throw null; } set { } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Text.DecoderFallbackBuffer FallbackBuffer { get { throw null; } }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        [System.Security.SecurityCriticalAttribute]
         public unsafe virtual void Convert(byte* bytes, int byteCount, char* chars, int charCount, bool flush, out int bytesUsed, out int charsUsed, out bool completed) { bytesUsed = default(int); charsUsed = default(int); completed = default(bool); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual void Convert(byte[] bytes, int byteIndex, int byteCount, char[] chars, int charIndex, int charCount, bool flush, out int bytesUsed, out int charsUsed, out bool completed) { bytesUsed = default(int); charsUsed = default(int); completed = default(bool); }
+        public virtual void Convert(System.ReadOnlySpan<byte> bytes, System.Span<char> chars, bool flush, out int bytesUsed, out int charsUsed, out bool completed) { bytesUsed = default(int); charsUsed = default(int); completed = default(bool); }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        [System.Security.SecurityCriticalAttribute]
         public unsafe virtual int GetCharCount(byte* bytes, int count, bool flush) { throw null; }
         public abstract int GetCharCount(byte[] bytes, int index, int count);
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual int GetCharCount(byte[] bytes, int index, int count, bool flush) { throw null; }
+        public virtual int GetCharCount(System.ReadOnlySpan<byte> bytes, bool flush) { throw null; }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        [System.Security.SecurityCriticalAttribute]
         public unsafe virtual int GetChars(byte* bytes, int byteCount, char* chars, int charCount, bool flush) { throw null; }
         public abstract int GetChars(byte[] bytes, int byteIndex, int byteCount, char[] chars, int charIndex);
         public virtual int GetChars(byte[] bytes, int byteIndex, int byteCount, char[] chars, int charIndex, bool flush) { throw null; }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
+        public virtual int GetChars(System.ReadOnlySpan<byte> bytes, System.Span<char> chars, bool flush) { throw null; }
         public virtual void Reset() { }
     }
     [System.SerializableAttribute]
@@ -24063,35 +24035,26 @@ namespace System.Text
         public override bool Fallback(byte[] bytesUnknown, int index) { throw null; }
         public override char GetNextChar() { throw null; }
         public override bool MovePrevious() { throw null; }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override void Reset() { }
     }
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.SerializableAttribute]
     public abstract partial class Encoder
     {
         protected Encoder() { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Text.EncoderFallback Fallback { get { throw null; } set { } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Text.EncoderFallbackBuffer FallbackBuffer { get { throw null; } }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        [System.Security.SecurityCriticalAttribute]
         public unsafe virtual void Convert(char* chars, int charCount, byte* bytes, int byteCount, bool flush, out int charsUsed, out int bytesUsed, out bool completed) { charsUsed = default(int); bytesUsed = default(int); completed = default(bool); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual void Convert(char[] chars, int charIndex, int charCount, byte[] bytes, int byteIndex, int byteCount, bool flush, out int charsUsed, out int bytesUsed, out bool completed) { charsUsed = default(int); bytesUsed = default(int); completed = default(bool); }
+        public virtual void Convert(System.ReadOnlySpan<char> chars, System.Span<byte> bytes, bool flush, out int charsUsed, out int bytesUsed, out bool completed) { charsUsed = default(int); bytesUsed = default(int); completed = default(bool); }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        [System.Security.SecurityCriticalAttribute]
         public unsafe virtual int GetByteCount(char* chars, int count, bool flush) { throw null; }
         public abstract int GetByteCount(char[] chars, int index, int count, bool flush);
+        public virtual int GetByteCount(System.ReadOnlySpan<char> chars, bool flush) { throw null; }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        [System.Security.SecurityCriticalAttribute]
         public unsafe virtual int GetBytes(char* chars, int charCount, byte* bytes, int byteCount, bool flush) { throw null; }
         public abstract int GetBytes(char[] chars, int charIndex, int charCount, byte[] bytes, int byteIndex, bool flush);
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
+        public virtual int GetBytes(System.ReadOnlySpan<char> chars, System.Span<byte> bytes, bool flush) { throw null; }
         public virtual void Reset() { }
     }
     [System.SerializableAttribute]
@@ -24162,7 +24125,6 @@ namespace System.Text
         public override bool Fallback(char charUnknown, int index) { throw null; }
         public override char GetNextChar() { throw null; }
         public override bool MovePrevious() { throw null; }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override void Reset() { }
     }
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
@@ -24191,6 +24153,7 @@ namespace System.Text
         public bool IsReadOnly { get { throw null; } }
         [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual bool IsSingleByte { get { throw null; } }
+        public virtual System.ReadOnlySpan<byte> Preamble { get { throw null; } }
         public static System.Text.Encoding Unicode { get { throw null; } }
         public static System.Text.Encoding UTF32 { get { throw null; } }
         public static System.Text.Encoding UTF7 { get { throw null; } }
@@ -24270,7 +24233,6 @@ namespace System.Text
         public System.Text.Encoding GetEncoding() { throw null; }
         public override int GetHashCode() { throw null; }
     }
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class EncodingProvider
     {
         public EncodingProvider() { }
@@ -24279,7 +24241,6 @@ namespace System.Text
         public abstract System.Text.Encoding GetEncoding(string name);
         public virtual System.Text.Encoding GetEncoding(string name, System.Text.EncoderFallback encoderFallback, System.Text.DecoderFallback decoderFallback) { throw null; }
     }
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum NormalizationForm
     {
         FormC = 1,
@@ -24384,7 +24345,6 @@ namespace System.Text
         public override string ToString() { throw null; }
         public string ToString(int startIndex, int length) { throw null; }
     }
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.SerializableAttribute]
     public partial class UnicodeEncoding : System.Text.Encoding
     {
@@ -24392,44 +24352,28 @@ namespace System.Text
         public UnicodeEncoding() { }
         public UnicodeEncoding(bool bigEndian, bool byteOrderMark) { }
         public UnicodeEncoding(bool bigEndian, bool byteOrderMark, bool throwOnInvalidBytes) { }
+        public override System.ReadOnlySpan<byte> Preamble { get { throw null; } }
         public override bool Equals(object value) { throw null; }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        [System.Security.SecurityCriticalAttribute]
         public unsafe override int GetByteCount(char* chars, int count) { throw null; }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override int GetByteCount(char[] chars, int index, int count) { throw null; }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override int GetByteCount(string s) { throw null; }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        [System.Security.SecurityCriticalAttribute]
         public unsafe override int GetBytes(char* chars, int charCount, byte* bytes, int byteCount) { throw null; }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override int GetBytes(char[] chars, int charIndex, int charCount, byte[] bytes, int byteIndex) { throw null; }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override int GetBytes(string s, int charIndex, int charCount, byte[] bytes, int byteIndex) { throw null; }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        [System.Security.SecurityCriticalAttribute]
         public unsafe override int GetCharCount(byte* bytes, int count) { throw null; }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override int GetCharCount(byte[] bytes, int index, int count) { throw null; }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        [System.Security.SecurityCriticalAttribute]
         public unsafe override int GetChars(byte* bytes, int byteCount, char* chars, int charCount) { throw null; }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override int GetChars(byte[] bytes, int byteIndex, int byteCount, char[] chars, int charIndex) { throw null; }
         public override System.Text.Decoder GetDecoder() { throw null; }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public override System.Text.Encoder GetEncoder() { throw null; }
         public override int GetHashCode() { throw null; }
         public override int GetMaxByteCount(int charCount) { throw null; }
         public override int GetMaxCharCount(int byteCount) { throw null; }
         public override byte[] GetPreamble() { throw null; }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        [System.Security.SecuritySafeCriticalAttribute]
         public override string GetString(byte[] bytes, int index, int count) { throw null; }
     }
     [System.SerializableAttribute]
@@ -24438,30 +24382,21 @@ namespace System.Text
         public UTF32Encoding() { }
         public UTF32Encoding(bool bigEndian, bool byteOrderMark) { }
         public UTF32Encoding(bool bigEndian, bool byteOrderMark, bool throwOnInvalidCharacters) { }
+        public override System.ReadOnlySpan<byte> Preamble { get { throw null; } }
         public override bool Equals(object value) { throw null; }
         [System.CLSCompliantAttribute(false)]
-        [System.Security.SecurityCriticalAttribute]
         public unsafe override int GetByteCount(char* chars, int count) { throw null; }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override int GetByteCount(char[] chars, int index, int count) { throw null; }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override int GetByteCount(string s) { throw null; }
         [System.CLSCompliantAttribute(false)]
-        [System.Security.SecurityCriticalAttribute]
         public unsafe override int GetBytes(char* chars, int charCount, byte* bytes, int byteCount) { throw null; }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override int GetBytes(char[] chars, int charIndex, int charCount, byte[] bytes, int byteIndex) { throw null; }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override int GetBytes(string s, int charIndex, int charCount, byte[] bytes, int byteIndex) { throw null; }
         [System.CLSCompliantAttribute(false)]
-        [System.Security.SecurityCriticalAttribute]
         public unsafe override int GetCharCount(byte* bytes, int count) { throw null; }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override int GetCharCount(byte[] bytes, int index, int count) { throw null; }
         [System.CLSCompliantAttribute(false)]
-        [System.Security.SecurityCriticalAttribute]
         public unsafe override int GetChars(byte* bytes, int byteCount, char* chars, int charCount) { throw null; }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override int GetChars(byte[] bytes, int byteIndex, int byteCount, char[] chars, int charIndex) { throw null; }
         public override System.Text.Decoder GetDecoder() { throw null; }
         public override System.Text.Encoder GetEncoder() { throw null; }
@@ -24469,92 +24404,56 @@ namespace System.Text
         public override int GetMaxByteCount(int charCount) { throw null; }
         public override int GetMaxCharCount(int byteCount) { throw null; }
         public override byte[] GetPreamble() { throw null; }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override string GetString(byte[] bytes, int index, int count) { throw null; }
     }
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.SerializableAttribute]
     public partial class UTF7Encoding : System.Text.Encoding
     {
         public UTF7Encoding() { }
         public UTF7Encoding(bool allowOptionals) { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public override bool Equals(object value) { throw null; }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        [System.Security.SecurityCriticalAttribute]
         public unsafe override int GetByteCount(char* chars, int count) { throw null; }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override int GetByteCount(char[] chars, int index, int count) { throw null; }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        [System.Security.SecuritySafeCriticalAttribute]
         public override int GetByteCount(string s) { throw null; }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        [System.Security.SecurityCriticalAttribute]
         public unsafe override int GetBytes(char* chars, int charCount, byte* bytes, int byteCount) { throw null; }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override int GetBytes(char[] chars, int charIndex, int charCount, byte[] bytes, int byteIndex) { throw null; }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        [System.Security.SecuritySafeCriticalAttribute]
         public override int GetBytes(string s, int charIndex, int charCount, byte[] bytes, int byteIndex) { throw null; }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        [System.Security.SecurityCriticalAttribute]
         public unsafe override int GetCharCount(byte* bytes, int count) { throw null; }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override int GetCharCount(byte[] bytes, int index, int count) { throw null; }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        [System.Security.SecurityCriticalAttribute]
         public unsafe override int GetChars(byte* bytes, int byteCount, char* chars, int charCount) { throw null; }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override int GetChars(byte[] bytes, int byteIndex, int byteCount, char[] chars, int charIndex) { throw null; }
         public override System.Text.Decoder GetDecoder() { throw null; }
         public override System.Text.Encoder GetEncoder() { throw null; }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public override int GetHashCode() { throw null; }
         public override int GetMaxByteCount(int charCount) { throw null; }
         public override int GetMaxCharCount(int byteCount) { throw null; }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        [System.Security.SecuritySafeCriticalAttribute]
         public override string GetString(byte[] bytes, int index, int count) { throw null; }
     }
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.SerializableAttribute]
     public partial class UTF8Encoding : System.Text.Encoding
     {
         public UTF8Encoding() { }
         public UTF8Encoding(bool encoderShouldEmitUTF8Identifier) { }
         public UTF8Encoding(bool encoderShouldEmitUTF8Identifier, bool throwOnInvalidBytes) { }
+        public override System.ReadOnlySpan<byte> Preamble { get { throw null; } }
         public override bool Equals(object value) { throw null; }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        [System.Security.SecurityCriticalAttribute]
         public unsafe override int GetByteCount(char* chars, int count) { throw null; }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override int GetByteCount(char[] chars, int index, int count) { throw null; }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override int GetByteCount(string chars) { throw null; }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        [System.Security.SecurityCriticalAttribute]
         public unsafe override int GetBytes(char* chars, int charCount, byte* bytes, int byteCount) { throw null; }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override int GetBytes(char[] chars, int charIndex, int charCount, byte[] bytes, int byteIndex) { throw null; }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override int GetBytes(string s, int charIndex, int charCount, byte[] bytes, int byteIndex) { throw null; }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        [System.Security.SecurityCriticalAttribute]
         public unsafe override int GetCharCount(byte* bytes, int count) { throw null; }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override int GetCharCount(byte[] bytes, int index, int count) { throw null; }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        [System.Security.SecurityCriticalAttribute]
         public unsafe override int GetChars(byte* bytes, int byteCount, char* chars, int charCount) { throw null; }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override int GetChars(byte[] bytes, int byteIndex, int byteCount, char[] chars, int charIndex) { throw null; }
         public override System.Text.Decoder GetDecoder() { throw null; }
         public override System.Text.Encoder GetEncoder() { throw null; }
@@ -24562,8 +24461,6 @@ namespace System.Text
         public override int GetMaxByteCount(int charCount) { throw null; }
         public override int GetMaxCharCount(int byteCount) { throw null; }
         public override byte[] GetPreamble() { throw null; }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        [System.Security.SecuritySafeCriticalAttribute]
         public override string GetString(byte[] bytes, int index, int count) { throw null; }
     }
 }
