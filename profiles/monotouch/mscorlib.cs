@@ -23029,7 +23029,6 @@ namespace System.Text
         FormKC = 5,
         FormKD = 6,
     }
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.SerializableAttribute]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public sealed partial class StringBuilder : System.Runtime.Serialization.ISerializable
@@ -23039,7 +23038,6 @@ namespace System.Text
         public StringBuilder(int capacity, int maxCapacity) { }
         public StringBuilder(string value) { }
         public StringBuilder(string value, int capacity) { }
-        [System.Security.SecuritySafeCriticalAttribute]
         public StringBuilder(string value, int startIndex, int length, int capacity) { }
         public int Capacity { get { throw null; } set { } }
         [System.Runtime.CompilerServices.IndexerName("Chars")]
@@ -23050,12 +23048,9 @@ namespace System.Text
         public System.Text.StringBuilder Append(byte value) { throw null; }
         public System.Text.StringBuilder Append(char value) { throw null; }
         [System.CLSCompliantAttribute(false)]
-        [System.Security.SecurityCriticalAttribute]
         public unsafe System.Text.StringBuilder Append(char* value, int valueCount) { throw null; }
         public System.Text.StringBuilder Append(char value, int repeatCount) { throw null; }
-        [System.Security.SecuritySafeCriticalAttribute]
         public System.Text.StringBuilder Append(char[] value) { throw null; }
-        [System.Security.SecuritySafeCriticalAttribute]
         public System.Text.StringBuilder Append(char[] value, int startIndex, int charCount) { throw null; }
         public System.Text.StringBuilder Append(decimal value) { throw null; }
         public System.Text.StringBuilder Append(double value) { throw null; }
@@ -23067,10 +23062,10 @@ namespace System.Text
         [System.CLSCompliantAttribute(false)]
         public System.Text.StringBuilder Append(sbyte value) { throw null; }
         public System.Text.StringBuilder Append(float value) { throw null; }
-        [System.Security.SecuritySafeCriticalAttribute]
         public System.Text.StringBuilder Append(string value) { throw null; }
-        [System.Security.SecuritySafeCriticalAttribute]
         public System.Text.StringBuilder Append(string value, int startIndex, int count) { throw null; }
+        public System.Text.StringBuilder Append(System.Text.StringBuilder value) { throw null; }
+        public System.Text.StringBuilder Append(System.Text.StringBuilder value, int startIndex, int count) { throw null; }
         [System.CLSCompliantAttribute(false)]
         public System.Text.StringBuilder Append(ushort value) { throw null; }
         [System.CLSCompliantAttribute(false)]
@@ -23085,22 +23080,24 @@ namespace System.Text
         public System.Text.StringBuilder AppendFormat(string format, object arg0, object arg1) { throw null; }
         public System.Text.StringBuilder AppendFormat(string format, object arg0, object arg1, object arg2) { throw null; }
         public System.Text.StringBuilder AppendFormat(string format, params object[] args) { throw null; }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
+        public System.Text.StringBuilder AppendJoin(char separator, params object[] values) { throw null; }
+        public System.Text.StringBuilder AppendJoin(char separator, params string[] values) { throw null; }
+        public System.Text.StringBuilder AppendJoin(string separator, params object[] values) { throw null; }
+        public System.Text.StringBuilder AppendJoin(string separator, params string[] values) { throw null; }
+        public System.Text.StringBuilder AppendJoin<T>(char separator, System.Collections.Generic.IEnumerable<T> values) { throw null; }
+        public System.Text.StringBuilder AppendJoin<T>(string separator, System.Collections.Generic.IEnumerable<T> values) { throw null; }
         public System.Text.StringBuilder AppendLine() { throw null; }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Text.StringBuilder AppendLine(string value) { throw null; }
         public System.Text.StringBuilder Clear() { throw null; }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        [System.Security.SecuritySafeCriticalAttribute]
         public void CopyTo(int sourceIndex, char[] destination, int destinationIndex, int count) { }
+        public void CopyTo(int sourceIndex, System.Span<char> destination, int count) { }
         public int EnsureCapacity(int capacity) { throw null; }
+        public bool Equals(System.ReadOnlySpan<char> span) { throw null; }
         public bool Equals(System.Text.StringBuilder sb) { throw null; }
         public System.Text.StringBuilder Insert(int index, bool value) { throw null; }
         public System.Text.StringBuilder Insert(int index, byte value) { throw null; }
-        [System.Security.SecuritySafeCriticalAttribute]
         public System.Text.StringBuilder Insert(int index, char value) { throw null; }
         public System.Text.StringBuilder Insert(int index, char[] value) { throw null; }
-        [System.Security.SecuritySafeCriticalAttribute]
         public System.Text.StringBuilder Insert(int index, char[] value, int startIndex, int charCount) { throw null; }
         public System.Text.StringBuilder Insert(int index, decimal value) { throw null; }
         public System.Text.StringBuilder Insert(int index, double value) { throw null; }
@@ -23108,12 +23105,11 @@ namespace System.Text
         public System.Text.StringBuilder Insert(int index, int value) { throw null; }
         public System.Text.StringBuilder Insert(int index, long value) { throw null; }
         public System.Text.StringBuilder Insert(int index, object value) { throw null; }
+        public System.Text.StringBuilder Insert(int index, System.ReadOnlySpan<char> value) { throw null; }
         [System.CLSCompliantAttribute(false)]
         public System.Text.StringBuilder Insert(int index, sbyte value) { throw null; }
         public System.Text.StringBuilder Insert(int index, float value) { throw null; }
-        [System.Security.SecuritySafeCriticalAttribute]
         public System.Text.StringBuilder Insert(int index, string value) { throw null; }
-        [System.Security.SecuritySafeCriticalAttribute]
         public System.Text.StringBuilder Insert(int index, string value, int count) { throw null; }
         [System.CLSCompliantAttribute(false)]
         public System.Text.StringBuilder Insert(int index, ushort value) { throw null; }
@@ -23126,11 +23122,8 @@ namespace System.Text
         public System.Text.StringBuilder Replace(char oldChar, char newChar, int startIndex, int count) { throw null; }
         public System.Text.StringBuilder Replace(string oldValue, string newValue) { throw null; }
         public System.Text.StringBuilder Replace(string oldValue, string newValue, int startIndex, int count) { throw null; }
-        [System.Security.SecurityCriticalAttribute]
         void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override string ToString() { throw null; }
-        [System.Security.SecuritySafeCriticalAttribute]
         public string ToString(int startIndex, int length) { throw null; }
     }
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
