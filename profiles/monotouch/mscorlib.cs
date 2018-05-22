@@ -6902,14 +6902,6 @@ namespace System.Collections.Generic
             void System.Collections.IEnumerator.Reset() { }
         }
     }
-    [System.SerializableAttribute]
-    public sealed partial class NonRandomizedStringEqualityComparer : System.Collections.Generic.EqualityComparer<string>, System.Runtime.Serialization.ISerializable
-    {
-        internal NonRandomizedStringEqualityComparer() { }
-        public sealed override bool Equals(string x, string y) { throw null; }
-        public sealed override int GetHashCode(string obj) { throw null; }
-        public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
-    }
 }
 namespace System.Collections.ObjectModel
 {
