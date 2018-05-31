@@ -25088,7 +25088,6 @@ namespace System.Threading
         [System.CLSCompliantAttribute(false)]
         public PreAllocatedOverlapped(System.Threading.IOCompletionCallback callback, object state, object pinData) { }
         public void Dispose() { }
-        ~PreAllocatedOverlapped() { }
     }
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class ReaderWriterLock : System.Runtime.ConstrainedExecution.CriticalFinalizerObject
