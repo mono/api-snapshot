@@ -9309,7 +9309,6 @@ namespace System.IO
         public long AvailableFreeSpace { get { throw null; } }
         public string DriveFormat { get { throw null; } }
         public System.IO.DriveType DriveType { get { throw null; } }
-        [System.MonoTODOAttribute("It always returns true")]
         public bool IsReady { get { throw null; } }
         public string Name { get { throw null; } }
         public System.IO.DirectoryInfo RootDirectory { get { throw null; } }
