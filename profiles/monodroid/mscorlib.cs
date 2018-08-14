@@ -10795,18 +10795,12 @@ namespace System.Reflection
         Standard = 1,
         VarArgs = 2,
     }
-    [System.Runtime.InteropServices.ClassInterfaceAttribute((System.Runtime.InteropServices.ClassInterfaceType)(0))]
-    [System.Runtime.InteropServices.ComDefaultInterfaceAttribute(typeof(System.Runtime.InteropServices._ConstructorInfo))]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.SerializableAttribute]
     public abstract partial class ConstructorInfo : System.Reflection.MethodBase
     {
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public static readonly string ConstructorName;
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public static readonly string TypeConstructorName;
         protected ConstructorInfo() { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public override System.Reflection.MemberTypes MemberType { get { throw null; } }
         public override bool Equals(object obj) { throw null; }
         public override int GetHashCode() { throw null; }
