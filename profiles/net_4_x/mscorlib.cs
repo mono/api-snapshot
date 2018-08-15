@@ -11174,7 +11174,6 @@ namespace System.Reflection
         public virtual System.Type LocalType { get { throw null; } }
         public override string ToString() { throw null; }
     }
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class ManifestResourceInfo
     {
         public ManifestResourceInfo(System.Reflection.Assembly containingAssembly, string containingFileName, System.Reflection.ResourceLocation resourceLocation) { }
@@ -11658,8 +11657,6 @@ namespace System.Reflection
         Public = 1,
     }
     [System.FlagsAttribute]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
-    [System.SerializableAttribute]
     public enum ResourceLocation
     {
         ContainedInAnotherAssembly = 2,
