@@ -44,8 +44,6 @@ namespace Microsoft.Win32
         public static void SetValue(string keyName, string valueName, object value) { }
         public static void SetValue(string keyName, string valueName, object value, Microsoft.Win32.RegistryValueKind valueKind) { }
     }
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
-    [System.SerializableAttribute]
     public enum RegistryHive
     {
         ClassesRoot = -2147483648,
@@ -109,13 +107,11 @@ namespace Microsoft.Win32
         ReadWriteSubTree = 2,
     }
     [System.FlagsAttribute]
-    [System.SerializableAttribute]
     public enum RegistryOptions
     {
         None = 0,
         Volatile = 1,
     }
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum RegistryValueKind
     {
         Binary = 3,
@@ -133,7 +129,6 @@ namespace Microsoft.Win32
         DoNotExpandEnvironmentNames = 1,
         None = 0,
     }
-    [System.SerializableAttribute]
     public enum RegistryView
     {
         Default = 0,
