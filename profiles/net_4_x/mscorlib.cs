@@ -12274,9 +12274,6 @@ namespace System.Reflection.Emit
         public void SetInterfaceConstraints(params System.Type[] interfaceConstraints) { }
         public override string ToString() { throw null; }
     }
-    [System.Runtime.InteropServices.ClassInterfaceAttribute((System.Runtime.InteropServices.ClassInterfaceType)(0))]
-    [System.Runtime.InteropServices.ComDefaultInterfaceAttribute(typeof(System.Runtime.InteropServices._ILGenerator))]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial class ILGenerator : System.Runtime.InteropServices._ILGenerator
     {
