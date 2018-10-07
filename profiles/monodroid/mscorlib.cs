@@ -5538,21 +5538,6 @@ namespace System
 }
 namespace System.Buffers
 {
-    public partial interface IRetainable
-    {
-        bool Release();
-        void Retain();
-    }
-    [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
-    public partial struct MemoryHandle : System.IDisposable
-    {
-        [System.CLSCompliantAttribute(false)]
-        public unsafe MemoryHandle(System.Buffers.IRetainable retainable, void* pointer=null, System.Runtime.InteropServices.GCHandle handle=default(System.Runtime.InteropServices.GCHandle)) { throw null;}
-        public bool HasPointer { get { throw null; } }
-        [System.CLSCompliantAttribute(false)]
-        public unsafe void* Pointer { get { throw null; } }
-        public void Dispose() { }
-    }
     public enum OperationStatus
     {
         DestinationTooSmall = 1,
