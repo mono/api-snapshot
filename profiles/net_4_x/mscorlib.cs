@@ -4947,6 +4947,7 @@ namespace System
         public bool IsAutoClass { get { throw null; } }
         public bool IsAutoLayout { get { throw null; } }
         public bool IsByRef { get { throw null; } }
+        public virtual bool IsByRefLike { get { throw null; } }
         public bool IsClass { get { throw null; } }
         public virtual bool IsCollectible { get { throw null; } }
         public bool IsCOMObject { get { throw null; } }
@@ -4954,9 +4955,11 @@ namespace System
         public bool IsContextful { get { throw null; } }
         public virtual bool IsEnum { get { throw null; } }
         public bool IsExplicitLayout { get { throw null; } }
+        public virtual bool IsGenericMethodParameter { get { throw null; } }
         public virtual bool IsGenericParameter { get { throw null; } }
         public virtual bool IsGenericType { get { throw null; } }
         public virtual bool IsGenericTypeDefinition { get { throw null; } }
+        public virtual bool IsGenericTypeParameter { get { throw null; } }
         public bool IsImport { get { throw null; } }
         public bool IsInterface { [System.Security.SecuritySafeCriticalAttribute]get { throw null; } }
         public bool IsLayoutSequential { get { throw null; } }
@@ -4979,6 +4982,7 @@ namespace System
         public virtual bool IsSerializable { get { throw null; } }
         public bool IsSpecialName { get { throw null; } }
         public virtual bool IsSZArray { get { throw null; } }
+        public virtual bool IsTypeDefinition { get { throw null; } }
         public bool IsUnicodeClass { get { throw null; } }
         public bool IsValueType { get { throw null; } }
         public bool IsVisible { get { throw null; } }
@@ -11679,8 +11683,6 @@ namespace System.Reflection
         VisibilityMask = 7,
         WindowsRuntime = 16384,
     }
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
-    [System.SerializableAttribute]
     public partial class TypeDelegator : System.Reflection.TypeInfo
     {
         protected System.Type typeImpl;
@@ -11691,8 +11693,13 @@ namespace System.Reflection
         public override System.Type BaseType { get { throw null; } }
         public override string FullName { get { throw null; } }
         public override System.Guid GUID { get { throw null; } }
+        public override bool IsByRefLike { get { throw null; } }
+        public override bool IsCollectible { get { throw null; } }
         public override bool IsConstructedGenericType { get { throw null; } }
+        public override bool IsGenericMethodParameter { get { throw null; } }
+        public override bool IsGenericTypeParameter { get { throw null; } }
         public override bool IsSZArray { get { throw null; } }
+        public override bool IsTypeDefinition { get { throw null; } }
         public override int MetadataToken { get { throw null; } }
         public override System.Reflection.Module Module { get { throw null; } }
         public override string Name { get { throw null; } }
@@ -11701,7 +11708,6 @@ namespace System.Reflection
         public override System.Type UnderlyingSystemType { get { throw null; } }
         protected override System.Reflection.TypeAttributes GetAttributeFlagsImpl() { throw null; }
         protected override System.Reflection.ConstructorInfo GetConstructorImpl(System.Reflection.BindingFlags bindingAttr, System.Reflection.Binder binder, System.Reflection.CallingConventions callConvention, System.Type[] types, System.Reflection.ParameterModifier[] modifiers) { throw null; }
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public override System.Reflection.ConstructorInfo[] GetConstructors(System.Reflection.BindingFlags bindingAttr) { throw null; }
         public override object[] GetCustomAttributes(bool inherit) { throw null; }
         public override object[] GetCustomAttributes(System.Type attributeType, bool inherit) { throw null; }
@@ -11712,7 +11718,6 @@ namespace System.Reflection
         public override System.Reflection.FieldInfo GetField(string name, System.Reflection.BindingFlags bindingAttr) { throw null; }
         public override System.Reflection.FieldInfo[] GetFields(System.Reflection.BindingFlags bindingAttr) { throw null; }
         public override System.Type GetInterface(string name, bool ignoreCase) { throw null; }
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public override System.Reflection.InterfaceMapping GetInterfaceMap(System.Type interfaceType) { throw null; }
         public override System.Type[] GetInterfaces() { throw null; }
         public override System.Reflection.MemberInfo[] GetMember(string name, System.Reflection.MemberTypes type, System.Reflection.BindingFlags bindingAttr) { throw null; }
