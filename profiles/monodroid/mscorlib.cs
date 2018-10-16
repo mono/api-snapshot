@@ -9331,7 +9331,6 @@ namespace System.IO
         public void SetAccessControl(System.Security.AccessControl.FileSecurity fileSecurity) { }
         public override string ToString() { throw null; }
     }
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.SerializableAttribute]
     public partial class FileLoadException : System.IO.IOException
     {
@@ -9342,9 +9341,8 @@ namespace System.IO
         public FileLoadException(string message, string fileName) { }
         public FileLoadException(string message, string fileName, System.Exception inner) { }
         public string FileName { get { throw null; } }
-        public string FusionLog { [System.Security.SecuritySafeCriticalAttribute][System.Security.Permissions.SecurityPermissionAttribute(System.Security.Permissions.SecurityAction.Demand, Flags=(System.Security.Permissions.SecurityPermissionFlag)(96))]get { throw null; } }
+        public string FusionLog { get { throw null; } }
         public override string Message { get { throw null; } }
-        [System.Security.SecurityCriticalAttribute]
         public override void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         public override string ToString() { throw null; }
     }
@@ -9478,7 +9476,6 @@ namespace System.IO
         [System.Security.SecuritySafeCriticalAttribute]
         public void Refresh() { }
     }
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.SerializableAttribute]
     public partial class IOException : System.SystemException
     {
