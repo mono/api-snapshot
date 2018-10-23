@@ -9670,7 +9670,6 @@ namespace System.IO
         public virtual System.Threading.Tasks.ValueTask WriteAsync(System.ReadOnlyMemory<byte> source, System.Threading.CancellationToken cancellationToken=default(System.Threading.CancellationToken)) { throw null; }
         public virtual void WriteByte(byte value) { }
     }
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.SerializableAttribute]
     public partial class StreamReader : System.IO.TextReader
     {
@@ -9685,7 +9684,6 @@ namespace System.IO
         public StreamReader(string path, bool detectEncodingFromByteOrderMarks) { }
         public StreamReader(string path, System.Text.Encoding encoding) { }
         public StreamReader(string path, System.Text.Encoding encoding, bool detectEncodingFromByteOrderMarks) { }
-        [System.Security.SecuritySafeCriticalAttribute]
         public StreamReader(string path, System.Text.Encoding encoding, bool detectEncodingFromByteOrderMarks, int bufferSize) { }
         public virtual System.IO.Stream BaseStream { get { throw null; } }
         public virtual System.Text.Encoding CurrentEncoding { get { throw null; } }
@@ -9695,21 +9693,17 @@ namespace System.IO
         protected override void Dispose(bool disposing) { }
         public override int Peek() { throw null; }
         public override int Read() { throw null; }
-        public override int Read([System.Runtime.InteropServices.In][System.Runtime.InteropServices.Out]char[] buffer, int index, int count) { buffer = default(char[]); throw null; }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        [System.Security.Permissions.HostProtectionAttribute(System.Security.Permissions.SecurityAction.LinkDemand, ExternalThreading=true)]
+        public override int Read(char[] buffer, int index, int count) { throw null; }
+        public override int Read(System.Span<char> buffer) { throw null; }
         public override System.Threading.Tasks.Task<int> ReadAsync(char[] buffer, int index, int count) { throw null; }
-        public override int ReadBlock([System.Runtime.InteropServices.In][System.Runtime.InteropServices.Out]char[] buffer, int index, int count) { buffer = default(char[]); throw null; }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        [System.Security.Permissions.HostProtectionAttribute(System.Security.Permissions.SecurityAction.LinkDemand, ExternalThreading=true)]
+        public override System.Threading.Tasks.ValueTask<int> ReadAsync(System.Memory<char> buffer, System.Threading.CancellationToken cancellationToken=default(System.Threading.CancellationToken)) { throw null; }
+        public override int ReadBlock(char[] buffer, int index, int count) { throw null; }
+        public override int ReadBlock(System.Span<char> buffer) { throw null; }
         public override System.Threading.Tasks.Task<int> ReadBlockAsync(char[] buffer, int index, int count) { throw null; }
+        public override System.Threading.Tasks.ValueTask<int> ReadBlockAsync(System.Memory<char> buffer, System.Threading.CancellationToken cancellationToken=default(System.Threading.CancellationToken)) { throw null; }
         public override string ReadLine() { throw null; }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        [System.Security.Permissions.HostProtectionAttribute(System.Security.Permissions.SecurityAction.LinkDemand, ExternalThreading=true)]
         public override System.Threading.Tasks.Task<string> ReadLineAsync() { throw null; }
         public override string ReadToEnd() { throw null; }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        [System.Security.Permissions.HostProtectionAttribute(System.Security.Permissions.SecurityAction.LinkDemand, ExternalThreading=true)]
         public override System.Threading.Tasks.Task<string> ReadToEndAsync() { throw null; }
     }
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
@@ -9820,7 +9814,6 @@ namespace System.IO
         [System.Security.Permissions.HostProtectionAttribute(System.Security.Permissions.SecurityAction.LinkDemand, ExternalThreading=true)]
         public override System.Threading.Tasks.Task WriteLineAsync(string value) { throw null; }
     }
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.SerializableAttribute]
     public abstract partial class TextReader : System.MarshalByRefObject, System.IDisposable
     {
@@ -9831,23 +9824,18 @@ namespace System.IO
         protected virtual void Dispose(bool disposing) { }
         public virtual int Peek() { throw null; }
         public virtual int Read() { throw null; }
-        public virtual int Read([System.Runtime.InteropServices.In][System.Runtime.InteropServices.Out]char[] buffer, int index, int count) { buffer = default(char[]); throw null; }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        [System.Security.Permissions.HostProtectionAttribute(System.Security.Permissions.SecurityAction.LinkDemand, ExternalThreading=true)]
+        public virtual int Read(char[] buffer, int index, int count) { throw null; }
+        public virtual int Read(System.Span<char> buffer) { throw null; }
         public virtual System.Threading.Tasks.Task<int> ReadAsync(char[] buffer, int index, int count) { throw null; }
-        public virtual int ReadBlock([System.Runtime.InteropServices.In][System.Runtime.InteropServices.Out]char[] buffer, int index, int count) { buffer = default(char[]); throw null; }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        [System.Security.Permissions.HostProtectionAttribute(System.Security.Permissions.SecurityAction.LinkDemand, ExternalThreading=true)]
+        public virtual System.Threading.Tasks.ValueTask<int> ReadAsync(System.Memory<char> buffer, System.Threading.CancellationToken cancellationToken=default(System.Threading.CancellationToken)) { throw null; }
+        public virtual int ReadBlock(char[] buffer, int index, int count) { throw null; }
+        public virtual int ReadBlock(System.Span<char> buffer) { throw null; }
         public virtual System.Threading.Tasks.Task<int> ReadBlockAsync(char[] buffer, int index, int count) { throw null; }
+        public virtual System.Threading.Tasks.ValueTask<int> ReadBlockAsync(System.Memory<char> buffer, System.Threading.CancellationToken cancellationToken=default(System.Threading.CancellationToken)) { throw null; }
         public virtual string ReadLine() { throw null; }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        [System.Security.Permissions.HostProtectionAttribute(System.Security.Permissions.SecurityAction.LinkDemand, ExternalThreading=true)]
         public virtual System.Threading.Tasks.Task<string> ReadLineAsync() { throw null; }
         public virtual string ReadToEnd() { throw null; }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        [System.Security.Permissions.HostProtectionAttribute(System.Security.Permissions.SecurityAction.LinkDemand, ExternalThreading=true)]
         public virtual System.Threading.Tasks.Task<string> ReadToEndAsync() { throw null; }
-        [System.Security.Permissions.HostProtectionAttribute(System.Security.Permissions.SecurityAction.LinkDemand, Synchronization=true)]
         public static System.IO.TextReader Synchronized(System.IO.TextReader reader) { throw null; }
     }
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
