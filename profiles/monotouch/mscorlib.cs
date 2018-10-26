@@ -1325,7 +1325,6 @@ namespace System
         White = 15,
         Yellow = 14,
     }
-    [System.SerializableAttribute]
     public enum ConsoleKey
     {
         A = 65,
@@ -3257,8 +3256,6 @@ namespace System
         public T Value { get { throw null; } }
         public override string ToString() { throw null; }
     }
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
-    [System.SerializableAttribute]
     public enum LoaderOptimization
     {
         [System.ObsoleteAttribute("This method has been deprecated. Please use Assembly.Load() instead. http://go.microsoft.com/fwlink/?linkid=14202")]
@@ -3271,7 +3268,6 @@ namespace System
         SingleDomain = 1,
     }
     [System.AttributeUsageAttribute((System.AttributeTargets)(64))]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class LoaderOptimizationAttribute : System.Attribute
     {
         public LoaderOptimizationAttribute(byte value) { }
