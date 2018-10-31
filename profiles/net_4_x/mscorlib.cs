@@ -23002,6 +23002,7 @@ namespace System.Security.Policy
         [System.ObsoleteAttribute]
         public Evidence(object[] hostEvidence, object[] assemblyEvidence) { }
         public Evidence(System.Security.Policy.Evidence evidence) { }
+        public Evidence(System.Security.Policy.EvidenceBase[] hostEvidence, System.Security.Policy.EvidenceBase[] assemblyEvidence) { }
         [System.ObsoleteAttribute]
         public int Count { get { throw null; } }
         public bool IsReadOnly { get { throw null; } }
