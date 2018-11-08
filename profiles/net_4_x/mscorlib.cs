@@ -6952,6 +6952,80 @@ namespace System.Collections.Generic
             void System.Collections.IEnumerator.Reset() { }
         }
     }
+    [System.Diagnostics.DebuggerDisplayAttribute("Count = {Count}")]
+    [System.Diagnostics.DebuggerTypeProxyAttribute("System.Collections.Generic.QueueDebugView<T>")]
+    [System.Runtime.CompilerServices.TypeForwardedFromAttribute("System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089")]
+    [System.SerializableAttribute]
+    public partial class Queue<T> : System.Collections.Generic.IEnumerable<T>, System.Collections.Generic.IReadOnlyCollection<T>, System.Collections.ICollection, System.Collections.IEnumerable
+    {
+        public Queue() { }
+        public Queue(System.Collections.Generic.IEnumerable<T> collection) { }
+        public Queue(int capacity) { }
+        public int Count { get { throw null; } }
+        bool System.Collections.ICollection.IsSynchronized { get { throw null; } }
+        object System.Collections.ICollection.SyncRoot { get { throw null; } }
+        public void Clear() { }
+        public bool Contains(T item) { throw null; }
+        public void CopyTo(T[] array, int arrayIndex) { }
+        public T Dequeue() { throw null; }
+        public void Enqueue(T item) { }
+        public System.Collections.Generic.Queue<T>.Enumerator GetEnumerator() { throw null; }
+        public T Peek() { throw null; }
+        System.Collections.Generic.IEnumerator<T> System.Collections.Generic.IEnumerable<T>.GetEnumerator() { throw null; }
+        void System.Collections.ICollection.CopyTo(System.Array array, int index) { }
+        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() { throw null; }
+        public T[] ToArray() { throw null; }
+        public void TrimExcess() { }
+        public bool TryDequeue(out T result) { result = default(T); throw null; }
+        public bool TryPeek(out T result) { result = default(T); throw null; }
+        [System.SerializableAttribute]
+        [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
+        public partial struct Enumerator : System.Collections.Generic.IEnumerator<T>, System.Collections.IEnumerator, System.IDisposable
+        {
+            public T Current { get { throw null; } }
+            object System.Collections.IEnumerator.Current { get { throw null; } }
+            public void Dispose() { }
+            public bool MoveNext() { throw null; }
+            void System.Collections.IEnumerator.Reset() { }
+        }
+    }
+    [System.Diagnostics.DebuggerDisplayAttribute("Count = {Count}")]
+    [System.Diagnostics.DebuggerTypeProxyAttribute("System.Collections.Generic.StackDebugView<T>")]
+    [System.Runtime.CompilerServices.TypeForwardedFromAttribute("System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089")]
+    [System.SerializableAttribute]
+    public partial class Stack<T> : System.Collections.Generic.IEnumerable<T>, System.Collections.Generic.IReadOnlyCollection<T>, System.Collections.ICollection, System.Collections.IEnumerable
+    {
+        public Stack() { }
+        public Stack(System.Collections.Generic.IEnumerable<T> collection) { }
+        public Stack(int capacity) { }
+        public int Count { get { throw null; } }
+        bool System.Collections.ICollection.IsSynchronized { get { throw null; } }
+        object System.Collections.ICollection.SyncRoot { get { throw null; } }
+        public void Clear() { }
+        public bool Contains(T item) { throw null; }
+        public void CopyTo(T[] array, int arrayIndex) { }
+        public System.Collections.Generic.Stack<T>.Enumerator GetEnumerator() { throw null; }
+        public T Peek() { throw null; }
+        public T Pop() { throw null; }
+        public void Push(T item) { }
+        System.Collections.Generic.IEnumerator<T> System.Collections.Generic.IEnumerable<T>.GetEnumerator() { throw null; }
+        void System.Collections.ICollection.CopyTo(System.Array array, int arrayIndex) { }
+        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() { throw null; }
+        public T[] ToArray() { throw null; }
+        public void TrimExcess() { }
+        public bool TryPeek(out T result) { result = default(T); throw null; }
+        public bool TryPop(out T result) { result = default(T); throw null; }
+        [System.SerializableAttribute]
+        [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
+        public partial struct Enumerator : System.Collections.Generic.IEnumerator<T>, System.Collections.IEnumerator, System.IDisposable
+        {
+            public T Current { get { throw null; } }
+            object System.Collections.IEnumerator.Current { get { throw null; } }
+            public void Dispose() { }
+            public bool MoveNext() { throw null; }
+            void System.Collections.IEnumerator.Reset() { }
+        }
+    }
 }
 namespace System.Collections.ObjectModel
 {
