@@ -11368,9 +11368,6 @@ namespace System.Reflection
         public MissingMetadataException() { }
         public MissingMetadataException(string message) { }
     }
-    [System.Runtime.InteropServices.ClassInterfaceAttribute(System.Runtime.InteropServices.ClassInterfaceType.None)]
-    [System.Runtime.InteropServices.ComDefaultInterfaceAttribute(typeof(System.Runtime.InteropServices._Module))]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.SerializableAttribute]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public abstract partial class Module : System.Reflection.ICustomAttributeProvider, System.Runtime.Serialization.ISerializable
@@ -11403,15 +11400,11 @@ namespace System.Reflection
         protected virtual System.Reflection.MethodInfo GetMethodImpl(string name, System.Reflection.BindingFlags bindingAttr, System.Reflection.Binder binder, System.Reflection.CallingConventions callConvention, System.Type[] types, System.Reflection.ParameterModifier[] modifiers) { throw null; }
         public System.Reflection.MethodInfo[] GetMethods() { throw null; }
         public virtual System.Reflection.MethodInfo[] GetMethods(System.Reflection.BindingFlags bindingFlags) { throw null; }
-        [System.Security.Permissions.SecurityPermissionAttribute(System.Security.Permissions.SecurityAction.LinkDemand, SerializationFormatter=true)]
         public virtual void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         public virtual void GetPEKind(out System.Reflection.PortableExecutableKinds peKind, out System.Reflection.ImageFileMachine machine) { throw null; }
         public virtual System.Security.Cryptography.X509Certificates.X509Certificate GetSignerCertificate() { throw null; }
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public virtual System.Type GetType(string className) { throw null; }
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public virtual System.Type GetType(string className, bool ignoreCase) { throw null; }
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public virtual System.Type GetType(string className, bool throwOnError, bool ignoreCase) { throw null; }
         public virtual System.Type[] GetTypes() { throw null; }
         public virtual bool IsDefined(System.Type attributeType, bool inherit) { throw null; }
