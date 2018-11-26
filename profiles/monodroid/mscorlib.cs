@@ -10549,7 +10549,7 @@ namespace System.Reflection
         public virtual System.Reflection.ManifestResourceInfo GetManifestResourceInfo(string resourceName) { throw null; }
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]public virtual string[] GetManifestResourceNames() { throw null; }
         public virtual System.IO.Stream GetManifestResourceStream(string name) { throw null; }
-        public virtual System.IO.Stream GetManifestResourceStream(System.Type type, string name) { throw null; }
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]public virtual System.IO.Stream GetManifestResourceStream(System.Type type, string name) { throw null; }
         public virtual System.Reflection.Module GetModule(string name) { throw null; }
         public System.Reflection.Module[] GetModules() { throw null; }
         public virtual System.Reflection.Module[] GetModules(bool getResourceModules) { throw null; }
@@ -11878,8 +11878,8 @@ namespace System.Reflection.Emit
         public override System.Reflection.AssemblyName GetName(bool copiedName) { throw null; }
         [System.MonoTODOAttribute("This always returns an empty array")]
         public override System.Reflection.AssemblyName[] GetReferencedAssemblies() { throw null; }
-        public override System.Reflection.Assembly GetSatelliteAssembly(System.Globalization.CultureInfo culture) { throw null; }
-        public override System.Reflection.Assembly GetSatelliteAssembly(System.Globalization.CultureInfo culture, System.Version version) { throw null; }
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]public override System.Reflection.Assembly GetSatelliteAssembly(System.Globalization.CultureInfo culture) { throw null; }
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]public override System.Reflection.Assembly GetSatelliteAssembly(System.Globalization.CultureInfo culture, System.Version version) { throw null; }
         public override System.Type GetType(string name, bool throwOnError, bool ignoreCase) { throw null; }
         public override bool IsDefined(System.Type attributeType, bool inherit) { throw null; }
         public void Save(string assemblyFileName) { }
