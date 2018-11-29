@@ -23918,7 +23918,7 @@ namespace System.Text
         public int Index { get { throw null; } }
     }
     [System.SerializableAttribute]
-    public sealed partial class DecoderReplacementFallback : System.Text.DecoderFallback
+    public sealed partial class DecoderReplacementFallback : System.Text.DecoderFallback, System.Runtime.Serialization.ISerializable
     {
         public DecoderReplacementFallback() { }
         public DecoderReplacementFallback(string replacement) { }
@@ -23927,6 +23927,7 @@ namespace System.Text
         public override System.Text.DecoderFallbackBuffer CreateFallbackBuffer() { throw null; }
         public override bool Equals(object value) { throw null; }
         public override int GetHashCode() { throw null; }
+        void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
     }
     public sealed partial class DecoderReplacementFallbackBuffer : System.Text.DecoderFallbackBuffer
     {
@@ -24007,7 +24008,7 @@ namespace System.Text
         public bool IsUnknownSurrogate() { throw null; }
     }
     [System.SerializableAttribute]
-    public sealed partial class EncoderReplacementFallback : System.Text.EncoderFallback
+    public sealed partial class EncoderReplacementFallback : System.Text.EncoderFallback, System.Runtime.Serialization.ISerializable
     {
         public EncoderReplacementFallback() { }
         public EncoderReplacementFallback(string replacement) { }
@@ -24016,6 +24017,7 @@ namespace System.Text
         public override System.Text.EncoderFallbackBuffer CreateFallbackBuffer() { throw null; }
         public override bool Equals(object value) { throw null; }
         public override int GetHashCode() { throw null; }
+        void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
     }
     public sealed partial class EncoderReplacementFallbackBuffer : System.Text.EncoderFallbackBuffer
     {
