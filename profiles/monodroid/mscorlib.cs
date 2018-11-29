@@ -21044,6 +21044,11 @@ namespace System.Security.Cryptography
         public CryptographicException(string message, System.Exception inner) { }
         public CryptographicException(string format, string insert) { }
     }
+    public static partial class CryptographicOperations
+    {
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.NoInlining, NoOptimization)]public static bool FixedTimeEquals(System.ReadOnlySpan<byte> left, System.ReadOnlySpan<byte> right) { throw null; }
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.NoInlining, NoOptimization)]public static void ZeroMemory(System.Span<byte> buffer) { }
+    }
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.SerializableAttribute]
     public partial class CryptographicUnexpectedOperationException : System.Security.Cryptography.CryptographicException
@@ -21278,7 +21283,6 @@ namespace System.Security.Cryptography
         DoNotIgnoreWhiteSpaces = 1,
         IgnoreWhiteSpaces = 0,
     }
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class HashAlgorithm : System.IDisposable, System.Security.Cryptography.ICryptoTransform
     {
         protected int HashSizeValue;
@@ -21300,10 +21304,13 @@ namespace System.Security.Cryptography
         public void Dispose() { }
         protected virtual void Dispose(bool disposing) { }
         protected abstract void HashCore(byte[] array, int ibStart, int cbSize);
+        protected virtual void HashCore(System.ReadOnlySpan<byte> source) { }
         protected abstract byte[] HashFinal();
         public abstract void Initialize();
         public int TransformBlock(byte[] inputBuffer, int inputOffset, int inputCount, byte[] outputBuffer, int outputOffset) { throw null; }
         public byte[] TransformFinalBlock(byte[] inputBuffer, int inputOffset, int inputCount) { throw null; }
+        public bool TryComputeHash(System.ReadOnlySpan<byte> source, System.Span<byte> destination, out int bytesWritten) { throw null; }
+        protected virtual bool TryHashFinal(System.Span<byte> destination, out int bytesWritten) { throw null; }
     }
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct HashAlgorithmName : System.IEquatable<System.Security.Cryptography.HashAlgorithmName>
