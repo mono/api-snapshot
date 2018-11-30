@@ -11267,12 +11267,7 @@ namespace System.Reflection
         Virtual = 64,
         VtableLayoutMask = 256,
     }
-    [System.Runtime.InteropServices.ClassInterfaceAttribute(System.Runtime.InteropServices.ClassInterfaceType.None)]
-    [System.Runtime.InteropServices.ComDefaultInterfaceAttribute(typeof(System.Runtime.InteropServices._MethodBase))]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
-    [System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.InheritanceDemand, Name="FullTrust")]
-    [System.SerializableAttribute]
-    public abstract partial class MethodBase : System.Reflection.MemberInfo, System.Runtime.InteropServices._MethodBase
+    public abstract partial class MethodBase : System.Reflection.MemberInfo
     {
         protected MethodBase() { }
         public abstract System.Reflection.MethodAttributes Attributes { get; }
@@ -11280,7 +11275,7 @@ namespace System.Reflection
         public virtual bool ContainsGenericParameters { get { throw null; } }
         public bool IsAbstract { get { throw null; } }
         public bool IsAssembly { get { throw null; } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
+        public virtual bool IsConstructedGenericMethod { get { throw null; } }
         public bool IsConstructor { get { throw null; } }
         public bool IsFamily { get { throw null; } }
         public bool IsFamilyAndAssembly { get { throw null; } }
@@ -11299,26 +11294,10 @@ namespace System.Reflection
         public bool IsVirtual { get { throw null; } }
         public abstract System.RuntimeMethodHandle MethodHandle { get; }
         public virtual System.Reflection.MethodImplAttributes MethodImplementationFlags { get { throw null; } }
-        bool System.Runtime.InteropServices._MethodBase.IsAbstract { get { throw null; } }
-        bool System.Runtime.InteropServices._MethodBase.IsAssembly { get { throw null; } }
-        bool System.Runtime.InteropServices._MethodBase.IsConstructor { get { throw null; } }
-        bool System.Runtime.InteropServices._MethodBase.IsFamily { get { throw null; } }
-        bool System.Runtime.InteropServices._MethodBase.IsFamilyAndAssembly { get { throw null; } }
-        bool System.Runtime.InteropServices._MethodBase.IsFamilyOrAssembly { get { throw null; } }
-        bool System.Runtime.InteropServices._MethodBase.IsFinal { get { throw null; } }
-        bool System.Runtime.InteropServices._MethodBase.IsHideBySig { get { throw null; } }
-        bool System.Runtime.InteropServices._MethodBase.IsPrivate { get { throw null; } }
-        bool System.Runtime.InteropServices._MethodBase.IsPublic { get { throw null; } }
-        bool System.Runtime.InteropServices._MethodBase.IsSpecialName { get { throw null; } }
-        bool System.Runtime.InteropServices._MethodBase.IsStatic { get { throw null; } }
-        bool System.Runtime.InteropServices._MethodBase.IsVirtual { get { throw null; } }
         public override bool Equals(object obj) { throw null; }
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]public static System.Reflection.MethodBase GetCurrentMethod() { throw null; }
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public virtual System.Type[] GetGenericArguments() { throw null; }
         public override int GetHashCode() { throw null; }
-        [System.Security.SecuritySafeCriticalAttribute]
-        [System.Security.Permissions.ReflectionPermissionAttribute(System.Security.Permissions.SecurityAction.Demand, Flags=System.Security.Permissions.ReflectionPermissionFlag.MemberAccess)]
         public virtual System.Reflection.MethodBody GetMethodBody() { throw null; }
         public static System.Reflection.MethodBase GetMethodFromHandle(System.RuntimeMethodHandle handle) { throw null; }
         [System.Runtime.InteropServices.ComVisibleAttribute(false)]
@@ -11331,11 +11310,6 @@ namespace System.Reflection
         public abstract object Invoke(object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, object[] parameters, System.Globalization.CultureInfo culture);
         public static bool operator ==(System.Reflection.MethodBase left, System.Reflection.MethodBase right) { throw null; }
         public static bool operator !=(System.Reflection.MethodBase left, System.Reflection.MethodBase right) { throw null; }
-        void System.Runtime.InteropServices._MethodBase.GetIDsOfNames([System.Runtime.InteropServices.In]ref System.Guid riid, System.IntPtr rgszNames, uint cNames, uint lcid, System.IntPtr rgDispId) { }
-        System.Type System.Runtime.InteropServices._MethodBase.GetType() { throw null; }
-        void System.Runtime.InteropServices._MethodBase.GetTypeInfo(uint iTInfo, uint lcid, System.IntPtr ppTInfo) { }
-        void System.Runtime.InteropServices._MethodBase.GetTypeInfoCount(out uint pcTInfo) { throw null; }
-        void System.Runtime.InteropServices._MethodBase.Invoke(uint dispIdMember, [System.Runtime.InteropServices.In]ref System.Guid riid, uint lcid, short wFlags, System.IntPtr pDispParams, System.IntPtr pVarResult, System.IntPtr pExcepInfo, System.IntPtr puArgErr) { }
     }
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class MethodBody
