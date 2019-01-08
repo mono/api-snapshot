@@ -2735,6 +2735,11 @@ namespace System.Data.Common
         public static System.Data.Common.DbProviderFactory GetFactory(System.Data.DataRow providerRow) { throw null; }
         public static System.Data.Common.DbProviderFactory GetFactory(string providerInvariantName) { throw null; }
         public static System.Data.DataTable GetFactoryClasses() { throw null; }
+        public static System.Collections.Generic.IEnumerable<string> GetProviderInvariantNames() { throw null; }
+        public static void RegisterFactory(string providerInvariantName, System.Data.Common.DbProviderFactory factory) { }
+        public static void RegisterFactory(string providerInvariantName, string factoryTypeAssemblyQualifiedName) { }
+        public static void RegisterFactory(string providerInvariantName, System.Type providerFactoryClass) { }
+        public static bool UnregisterFactory(string providerInvariantName) { throw null; }
     }
     public partial class DbProviderFactoriesConfigurationHandler : System.Configuration.IConfigurationSectionHandler
     {
@@ -4025,6 +4030,7 @@ namespace System.Data.SqlClient
         public SqlConnection() { }
         public SqlConnection(string connectionString) { }
         public SqlConnection(string connectionString, System.Data.SqlClient.SqlCredential credential) { }
+        public string AccessToken { get { throw null; } set { } }
         public System.Guid ClientConnectionId { get { throw null; } }
         public override string ConnectionString { get { throw null; } set { } }
         public override int ConnectionTimeout { get { throw null; } }
