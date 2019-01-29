@@ -4644,8 +4644,7 @@ namespace System
         public virtual System.DateTime ToLocalTime(System.DateTime time) { throw null; }
         public virtual System.DateTime ToUniversalTime(System.DateTime time) { throw null; }
     }
-    [System.Runtime.CompilerServices.TypeForwardedFromAttribute("System.Core, Version=3.5.0.0, Culture=Neutral, PublicKeyToken=b77a5c561934e089")]
-    [System.Security.Permissions.HostProtectionAttribute(System.Security.Permissions.SecurityAction.LinkDemand, MayLeakOnAbort=true)]
+    [System.Runtime.CompilerServices.TypeForwardedFromAttribute("System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089")]
     [System.SerializableAttribute]
     public sealed partial class TimeZoneInfo : System.IEquatable<System.TimeZoneInfo>, System.Runtime.Serialization.IDeserializationCallback, System.Runtime.Serialization.ISerializable
     {
@@ -4692,8 +4691,6 @@ namespace System
         void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         public string ToSerializedString() { throw null; }
         public override string ToString() { throw null; }
-        [System.Runtime.CompilerServices.TypeForwardedFromAttribute("System.Core, Version=3.5.0.0, Culture=Neutral, PublicKeyToken=b77a5c561934e089")]
-        [System.Security.Permissions.HostProtectionAttribute(System.Security.Permissions.SecurityAction.LinkDemand, MayLeakOnAbort=true)]
         [System.SerializableAttribute]
         public sealed partial class AdjustmentRule : System.IEquatable<System.TimeZoneInfo.AdjustmentRule>, System.Runtime.Serialization.IDeserializationCallback, System.Runtime.Serialization.ISerializable
         {
@@ -4707,16 +4704,13 @@ namespace System
             public bool Equals(System.TimeZoneInfo.AdjustmentRule other) { throw null; }
             public override int GetHashCode() { throw null; }
             void System.Runtime.Serialization.IDeserializationCallback.OnDeserialization(object sender) { }
-            [System.Security.SecurityCriticalAttribute]
             void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         }
-        [System.Runtime.CompilerServices.TypeForwardedFromAttribute("System.Core, Version=3.5.0.0, Culture=Neutral, PublicKeyToken=b77a5c561934e089")]
-        [System.Security.Permissions.HostProtectionAttribute(System.Security.Permissions.SecurityAction.LinkDemand, MayLeakOnAbort=true)]
         [System.SerializableAttribute]
         [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
-        public partial struct TransitionTime : System.IEquatable<System.TimeZoneInfo.TransitionTime>, System.Runtime.Serialization.IDeserializationCallback, System.Runtime.Serialization.ISerializable
+        public readonly partial struct TransitionTime : System.IEquatable<System.TimeZoneInfo.TransitionTime>, System.Runtime.Serialization.IDeserializationCallback, System.Runtime.Serialization.ISerializable
         {
-            private int _dummyPrimitive;
+            private readonly int _dummyPrimitive;
             public int Day { get { throw null; } }
             public System.DayOfWeek DayOfWeek { get { throw null; } }
             public bool IsFixedDateRule { get { throw null; } }
@@ -4731,7 +4725,6 @@ namespace System
             public static bool operator ==(System.TimeZoneInfo.TransitionTime t1, System.TimeZoneInfo.TransitionTime t2) { throw null; }
             public static bool operator !=(System.TimeZoneInfo.TransitionTime t1, System.TimeZoneInfo.TransitionTime t2) { throw null; }
             void System.Runtime.Serialization.IDeserializationCallback.OnDeserialization(object sender) { }
-            [System.Security.SecurityCriticalAttribute]
             void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         }
     }
