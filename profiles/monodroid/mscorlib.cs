@@ -7322,7 +7322,6 @@ namespace System.Diagnostics
             None = 0,
         }
     }
-    [System.MonoTODOAttribute("The Debugger class is not functional")]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class Debugger
     {
@@ -7332,7 +7331,6 @@ namespace System.Diagnostics
         public static bool IsAttached { get { throw null; } }
         public static void Break() { }
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]public static bool IsLogging() { throw null; }
-        [System.MonoTODOAttribute("Not implemented")]
         public static bool Launch() { throw null; }
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]public static void Log(int level, string category, string message) { }
         public static void NotifyOfCrossThreadDependency() { }
