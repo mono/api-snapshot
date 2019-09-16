@@ -11513,6 +11513,7 @@ namespace System.Reflection
         public static bool operator ==(System.Reflection.MethodInfo left, System.Reflection.MethodInfo right) { throw null; }
         public static bool operator !=(System.Reflection.MethodInfo left, System.Reflection.MethodInfo right) { throw null; }
         void System.Runtime.InteropServices._MethodInfo.GetIDsOfNames([System.Runtime.InteropServices.In]ref System.Guid riid, System.IntPtr rgszNames, uint cNames, uint lcid, System.IntPtr rgDispId) { }
+        System.Type System.Runtime.InteropServices._MethodInfo.GetType() { throw null; }
         void System.Runtime.InteropServices._MethodInfo.GetTypeInfo(uint iTInfo, uint lcid, System.IntPtr ppTInfo) { }
         void System.Runtime.InteropServices._MethodInfo.GetTypeInfoCount(out uint pcTInfo) { throw null; }
         void System.Runtime.InteropServices._MethodInfo.Invoke(uint dispIdMember, [System.Runtime.InteropServices.In]ref System.Guid riid, uint lcid, short wFlags, System.IntPtr pDispParams, System.IntPtr pVarResult, System.IntPtr pExcepInfo, System.IntPtr puArgErr) { }
