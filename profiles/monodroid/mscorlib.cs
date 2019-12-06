@@ -393,9 +393,12 @@ namespace System
         [System.ObsoleteAttribute("Use AppDomainSetup.ShadowCopyDirectories")]
         [System.Security.Permissions.SecurityPermissionAttribute(System.Security.Permissions.SecurityAction.LinkDemand, ControlAppDomain=true)]
         public void ClearShadowCopyPath() { }
+        [System.ObsoleteAttribute("AppDomain.CreateDomain will no longer be supported in .NET 5 and later.  Consider AssemblyLoadContext when it becomes available https://docs.microsoft.com/en-us/dotnet/core/dependency-loading/understanding-assemblyloadcontext")]
         public static System.AppDomain CreateDomain(string friendlyName) { throw null; }
+        [System.ObsoleteAttribute("AppDomain.CreateDomain will no longer be supported in .NET 5 and later.  Consider AssemblyLoadContext when it becomes available https://docs.microsoft.com/en-us/dotnet/core/dependency-loading/understanding-assemblyloadcontext")]
         public static System.AppDomain CreateDomain(string friendlyName, System.Security.Policy.Evidence securityInfo) { throw null; }
         [System.MonoLimitationAttribute("Currently it does not allow the setup in the other domain")]
+        [System.ObsoleteAttribute("AppDomain.CreateDomain will no longer be supported in .NET 5 and later.  Consider AssemblyLoadContext when it becomes available https://docs.microsoft.com/en-us/dotnet/core/dependency-loading/understanding-assemblyloadcontext")]
         [System.Security.Permissions.SecurityPermissionAttribute(System.Security.Permissions.SecurityAction.Demand, ControlAppDomain=true)]
         public static System.AppDomain CreateDomain(string friendlyName, System.Security.Policy.Evidence securityInfo, System.AppDomainSetup info) { throw null; }
         public static System.AppDomain CreateDomain(string friendlyName, System.Security.Policy.Evidence securityInfo, string appBasePath, string appRelativeSearchPath, bool shadowCopyFiles) { throw null; }
