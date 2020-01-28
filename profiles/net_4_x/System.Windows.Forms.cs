@@ -2349,6 +2349,7 @@ namespace System.Windows.Forms
         public virtual bool AutoSize { get { throw null; } set { } }
         [System.Runtime.InteropServices.DispIdAttribute(-501)]
         public virtual System.Drawing.Color BackColor { get { throw null; } set { } }
+        protected System.Drawing.SolidBrush BackColorBrush { get { throw null; } }
         [System.ComponentModel.DefaultValueAttribute(null)]
         [System.ComponentModel.LocalizableAttribute(true)]
         public virtual System.Drawing.Image BackgroundImage { get { throw null; } set { } }
