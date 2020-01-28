@@ -2295,8 +2295,9 @@ namespace System.Windows.Forms
         public ContextMenuStrip(System.ComponentModel.IContainer container) { }
         [System.ComponentModel.BrowsableAttribute(false)]
         [System.ComponentModel.DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public System.Windows.Forms.Control SourceControl { get { throw null; } }
+        public System.Windows.Forms.Control SourceControl { get { throw null; } protected set { } }
         protected override void Dispose(bool disposing) { }
+        protected override void SetOwnerControl(System.Windows.Forms.Control control) { }
         protected override void SetVisibleCore(bool visible) { }
     }
     [System.ComponentModel.DefaultEventAttribute("Click")]
@@ -16056,6 +16057,7 @@ namespace System.Windows.Forms
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
         protected override void ScaleCore(float dx, float dy) { }
         protected override void SetBoundsCore(int x, int y, int width, int height, System.Windows.Forms.BoundsSpecified specified) { }
+        protected virtual void SetOwnerControl(System.Windows.Forms.Control ownerControl) { }
         protected override void SetVisibleCore(bool visible) { }
         [System.ComponentModel.BrowsableAttribute(false)]
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
