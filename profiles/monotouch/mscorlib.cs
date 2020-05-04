@@ -207,6 +207,24 @@ namespace Microsoft.Win32.SafeHandles
 }
 namespace Mono
 {
+    public abstract partial class ExceptionFilter
+    {
+        public static readonly int exception_continue_search;
+        public static readonly int exception_continue_search_due_to_unhandled_exception;
+        public static readonly int exception_early_out;
+        public static readonly int exception_execute_handler;
+        protected ExceptionFilter() { }
+        public abstract int Evaluate(object exc);
+        public static void PerformEvaluate(object exc) { }
+        public static void Pop(Mono.ExceptionFilter filter) { }
+        public static void Push(Mono.ExceptionFilter filter) { }
+        public bool ShouldRunHandler(object exc) { throw null; }
+    }
+    public partial class ExceptionFilterException : System.Exception
+    {
+        public ExceptionFilterException(string message) { }
+        public ExceptionFilterException(string message, System.Exception innerException) { }
+    }
     public static partial class Runtime
     {
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]public static string GetDisplayName() { throw null; }
